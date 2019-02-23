@@ -1,11 +1,7 @@
-FROM tomcat
+FROM anoop600/tomcat
 
-MAINTAINER srinivas
-RUN apt-get update && apt-get -y upgrade
+MAINTAINER anoop
 
-WORKDIR /usr/local/tomcat
+COPY /var/lib/jenkins/workspace/Demo-MVC/target/SpringMVCHibernate.war /usr/local/tomcat/webapps/
 
-COPY tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
-COPY context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml
 
-EXPOSE 8080
