@@ -1,6 +1,6 @@
-FROM hajira/tomcat
+FROM suriaraj/tomcat
 
-MAINTAINER hajira
+MAINTAINER suriaraj
 
 COPY target/SpringMVCHibernate.war /usr/local/tomcat/webapps/
 
